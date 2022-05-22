@@ -10,7 +10,6 @@ import ModalEliminarColaborador from "../components/ModalEliminarColaborador";
 import Spinner from "../components/Spinner";
 import useAdmin from "../context/useAdmin";
 import io from "socket.io-client";
-import { formatearFecha } from "../helpers/formatearFecha";
 
 let socket;
 
@@ -96,9 +95,6 @@ const Proyecto = () => {
           </Link>
         </div>
         )}
-      </div>
-      <div className="mt-3">
-      <p className="text-gray-700 font-bold text-sm">Fecha de Entrega: <span className="text-xs">{fechaEntrega.split('T')[0]}</span></p>
       </div>
       {admin && (
       <motion.button
